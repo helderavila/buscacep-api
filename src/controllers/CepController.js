@@ -5,7 +5,7 @@ module.exports = {
   async store(req, res) {
     const { cod } =  req.body; //Recuperando o cep no json
 
-    const response = await axios.get(`https://viacep.com.br/ws/${cod}/json/`) // Consultando a api do github
+    const response = await axios.get(`https://viacep.com.br/ws/${cod}/json/`) 
 
     const { logradouro, complemento, bairro, localidade, uf } = response.data;
 
